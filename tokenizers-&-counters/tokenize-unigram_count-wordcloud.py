@@ -78,7 +78,7 @@ file_name = text_name.rsplit('/', 1)[-1]
 file_name = file_name.split('.')[0]
 
 import csv
-w = csv.writer(open((""+"unigrams_count_"+file_name+".csv"), "w")) ## in the quotation marks insert the path of the output folder
+w = csv.writer(open((""+"unigrams_count_"+file_name+".csv"), "w", , newline="")) ## in the quotation marks insert the path of the output folder
 for key, val in word_frequency.items():
     w.writerow([key, val])
     
