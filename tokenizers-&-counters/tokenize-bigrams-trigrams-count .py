@@ -84,7 +84,7 @@ file_name = text_name.rsplit('/', 1)[-1]
 file_name = file_name.split('.')[0]
 
 import csv
-w = csv.writer(open((""+"bigrams_count_"+file_name+".csv"), "w")) #in the quotation marks, insert the output folder
+w = csv.writer(open((""+"bigrams_count_"+file_name+".csv"), "w", newline="")) #in the quotation marks, insert the output folder
 for i in sort_bigramCount:
     w.writerow([i[0], i[1]])
 
