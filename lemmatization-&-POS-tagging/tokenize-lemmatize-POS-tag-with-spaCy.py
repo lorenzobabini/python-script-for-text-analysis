@@ -35,12 +35,12 @@ my_doc = nlp(text)
 import csv
 w = csv.writer(open((""+"spaCy_POS_"+file_name+".csv"), "w", newline=""))  ## in the quotation marks insert the path of the output folder
 for token in my_doc:
-    if token.text != " " and token.text != "\n" and token.text != "\t" and token.text != "\b" and token.text != "\r" and token.text != "" and token.text != "" and token.text != "!" and token.text != "?" and token.text != "." and token.text != "," and token.text != ";" and token.text != "-" and token.text != ":" and token.text != "—" and token.text != "'" and token.text != ".." and token.text != "(" and token.text != ")":
+    if token.text.isalpha() == True :
         w.writerow([token, token.pos_])
 
 
 w = csv.writer(open(("C:/Users/LORENZO.BABINI/OneDrive - Università Cattolica del Sacro Cuore/Documenti/Digital Humanities/Python-environment/output/"+"spaCy_LEMMA_"+file_name+".csv"), "w", newline=""))
 for token in my_doc:
-    if token.text != " " and token.text != "\n" and token.text != "\t" and token.text != "\b" and token.text != "\r" and token.text != "" and token.text != "" and token.text != "!" and token.text != "?" and token.text != "." and token.text != "," and token.text != ";" and token.text != "-" and token.text != ":" and token.text != "—" and token.text != "'" and token.text != ".." and token.text != "(" and token.text != ")":
+    if token.text.isalpha() == True :
         w.writerow([token, token.lemma_])
 
