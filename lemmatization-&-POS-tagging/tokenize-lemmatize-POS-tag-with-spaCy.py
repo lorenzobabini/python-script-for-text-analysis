@@ -21,7 +21,7 @@ file_name = text_name.rsplit('/', 1)[-1]
 file_name = file_name.split('.')[0]
 
 import csv
-w = csv.writer(open((""+"spaCy_TOKENS_"+file_name+".csv"), "w", newline="")) ## in the quotation marks insert the path of the output folder
+w = csv.writer(open((""+"spaCy_TOKENS_"+file_name+".csv"), "w", newline="", encoding='utf-8')) ## in the quotation marks insert the path of the output folder
 for i in tokens:
     w.writerow([i])
 
@@ -33,13 +33,13 @@ my_doc = nlp(text)
 
 
 import csv
-w = csv.writer(open((""+"spaCy_POS_"+file_name+".csv"), "w", newline=""))  ## in the quotation marks insert the path of the output folder
+w = csv.writer(open((""+"spaCy_POS_"+file_name+".csv"), "w", newline="", encoding='utf-8'))  ## in the quotation marks insert the path of the output folder
 for token in my_doc:
     if token.text.isalpha() == True :
         w.writerow([token, token.pos_])
 
 
-w = csv.writer(open(("C:/Users/LORENZO.BABINI/OneDrive - Università Cattolica del Sacro Cuore/Documenti/Digital Humanities/Python-environment/output/"+"spaCy_LEMMA_"+file_name+".csv"), "w", newline=""))
+w = csv.writer(open(("C:/Users/LORENZO.BABINI/OneDrive - Università Cattolica del Sacro Cuore/Documenti/Digital Humanities/Python-environment/output/"+"spaCy_LEMMA_"+file_name+".csv"), "w", newline="", encoding='utf-8'))
 for token in my_doc:
     if token.text.isalpha() == True :
         w.writerow([token, token.lemma_])
