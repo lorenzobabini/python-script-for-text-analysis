@@ -4,6 +4,6 @@ Here are templates and notes for the main text analysis techniques, edited both 
 
 # License
 
-CC BY License Logo
+![cc](https://github.com/LorenzoBabini/Python-script-for-text-analysis/assets/95250637/96273291-d44c-4e9e-ada3-dd02963d35c9)
 
 This works are licensed under a Creative Commons CC BY License
