@@ -1,1 +1,3 @@
+# Lemmatizers, POS taggers and Name Entity Recognizers
+
 Here are a Jupyter Notebook template to extract tokens, lemmas, POS tags and entities from a text files, using Spacy or Stanza
